@@ -1,5 +1,10 @@
+import NavBar from "./Nav"
+
 export default function Header() {
     return(
-        <h1>Header</h1>
+        <header className="header">            
+            <NavBar />
+            <h1>Mit Portfolio</h1>
+        </header>
     )
 }
