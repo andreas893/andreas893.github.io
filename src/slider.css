@@ -28,6 +28,8 @@ body h1{
 .projekt-heading{
     padding: 0 1.2rem;
     margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .projekt-heading h1{
@@ -55,21 +57,18 @@ body h1{
 
 .project-slider{
     position: relative;
-    height: 100vh;
     overflow: hidden;
 }
 
 .projects-wrapper{
     display: flex;
     height: 100%;
-    padding: 2rem 1.2rem;
 }
 
 /* Hvert projekt fylder en viewport */
 .project-card {
   flex: 0 0 30vw;
   margin: 0 2vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -85,8 +84,8 @@ body h1{
 
 /* billedet centreres */
 .project-card img {
-    width: 250px;
-    height: 350px;
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     margin-bottom: 1rem;
 }
@@ -101,7 +100,7 @@ body h1{
 /* knapperne nederst */
 .slider-controls {
   position: absolute;
-  bottom: 5rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -121,4 +120,50 @@ body h1{
 
 .slider-controls button:hover {
   background: #f0f0f0;
+}
+
+.after-heading {
+  height: 20vh; /* adjust how tall this block should be */
+}
+
+.after-heading h1 {
+  opacity: 0;
+  transform: translateY(50px); /* start slightly below */
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Info bar sits at bottom of image */
+.info-bar {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+background: var(--secondary-color);
+ color: var(--tetriary-color);
+
+  opacity: 0;                 
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.info-bar p{
+    padding: 0.4rem;
+}
+
+/* Show bar on hover */
+.image-wrapper:hover .info-bar {
+  opacity: 1;
 }

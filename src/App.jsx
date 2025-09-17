@@ -3,10 +3,13 @@ import Landing from "./pages/Landing"
 import About from "./pages/About"
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
+import ProjectDetails from "./pages/ProjectDetails";
+
 
 
 function App() {
   
+
 
   return (
     <>
@@ -16,6 +19,7 @@ function App() {
           <Route path="/om" element={<About />}/>
           <Route path="/projekter" element={<Projects />}/>
           <Route path="/kontakt" element={<Contact />}/>
+          <Route path="/projekter/:id" element={<ProjectDetails />} />
         </Routes>
       </main>
     </>

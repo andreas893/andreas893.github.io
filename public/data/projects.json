@@ -4,27 +4,58 @@
     "number":"(01)",
     "title": "BAG FACADEN",
     "client": "STENO MUSEET",
-    "image": "home/bag-facaden.png"
+    "services":["UX Design", "Graphic Design"],
+    "tools":["JavaScript", "Figma","CSS&HTML"],
+    "image": ["home/bag-facaden.png", "/details/bag-facaden-1.png", "/details/bag-facaden-2.png", "/details/bag-facaden-3.png", "/details/bag-facaden-4.png"],
+    "opgaven":"Under Huden er udviklet i samarbejde med Steno Museet og sætter fokus på social angst. Projektet undersøger, hvordan følelser kan visualiseres gennem grafiske elementer og video, for at skabe en oplevelse, der formidler emnet på en nærværende og visuel måde.",
+    "kompetencer":["HTML", "CSS", "JS", "FIGMA", "BRUGERCENTRERET DESIGN"],
+    "year":"2025",
+    "purpose":"Formålet med Bag Facaden var at skabe en interaktiv oplevelse for Steno Museet, der kunne formidle social angst på en nærværende og visuelt stærk måde gennem grafik, video og storytelling.",
+    "result":"Projektet har givet mig erfaring med at arbejde brugercentreret og anvende UX-metoder til at omsætte research til konkrete designløsninger. Jeg har samtidig styrket mine kompetencer i at bruge visuelle og interaktive virkemidler til at kommunikere abstrakte følelser, og jeg har oplevet hvilke udfordringer denne type løsning bringer sig.",
+    "video":"/details/bag-facaden-vid.mp4"
   },
   {
     "id": 2,
     "number":"(02)",
     "title": "GSAP PROJEKT",
     "client": "SELVSTÆNDIGT",
-    "image": "/projects/gsap.png"
+    "services":["Motion Design", "Animation"],
+    "tools":["GSAP", "REACT", "Tailwind CSS"],
+    "image":["/projects/gsap.png", "/details/gsap-1.png", "/details/gsap-2.png", "/details/gsap-3.png", "/details/gsap-4.png",],
+    "opgaven":"Projektet bestod i at designe og programmere en landing page i REACT for en fiktiv cocktailbar. Der var særligt fokus på at integrere motion og GSAP-animation som en central del af oplevelsen. Projektet er lavet med udgangspunkt i “JSmastery GSAP Course” Youtube video.",
+    "kompetencer":["GSAP", "REACT", "TAILWIND-CSS", "JS", "FIGMA", "MOTIONDESIGN"],
+    "year":"2025",
+    "purpose":"Formålet med projektet var at opnå praktisk erfaring med GSAP og udforske, hvordan animationer kan bruges til at skabe en levende og engagerende brugeroplevelse. Samtidig havde projektet til hensigt at skærpe mine kompetencer i React gennem arbejdet med en komplet frontend-løsning.",
+    "result":"Erfaring med at implementere motion i React, styrket mine GSAP-færdigheder og lært at bruge animation som en aktiv del af brugeroplevelsen.",
+    "video":"/details/gsap-vid.mp4"
   },
   {
     "id": 3,
     "number":"(03)",
     "title": "RADAR VENUE",
     "client": "RADAR LIVE",
-    "image": "/projects/radar-live-2.png"
+    "services":["UX Design", "Redesign"],
+    "tools":["Figma","CSS&HTML"],
+    "image":["/projects/radar-livetwo.png", "/details/radar-img-1.png", "/details/radar-img-2.png", "/details/radar-img-3.png", "/details/radar-img-4.png"],
+    "opgaven":"At udvikle en digital løsning for spillestedet Radar ved Godsbanen i Aarhus, som er et fællesskab for unge og en platform for niche- og upcoming musik. Projektet handlede om at formidle Radars værdier og gøre information om koncerter mere tilgængelig.",
+    "kompetencer":["HTML", "CSS", "FIGMA", "BRUGERCENTRERET DESIGN"],
+    "year":"2024",
+    "purpose":"At skabe en hjemmeside, der afspejler Radars identitet og understøtter deres rolle i Aarhus’ musikmiljø gennem UX, informationsarkitektur og branding.",
+    "result":"Styrket mine kompetencer inden for brugercentreret design, SEO og prototyping samt lært at koble research og designvalg i en løsning til et konkret kulturmiljø.",
+    "video":"/details/radar-vid.mp4"
   },
   {
     "id": 4,
     "number":"(04)",
     "title": "UNIQLO LIFEWEAR",
     "client": "SELVSTÆNDIGT",
-    "image": "/projects/uniqlo.png"
+    "services":["Graphic Design"],
+    "tools":["PhotoShop", "Figma","Illustrator"],
+    "image":["/projects/uniqlo.png", "/details/lifewear-img.png", "/details/lifewear-img-2.png", "/details/lifewear-img-3.png", "/details/lifewear-img-4.png", "/details/lifewear-img-5.png",],
+    "opgaven":"At redesigne forsiden og det visuelle udtryk for Uniqlo’s LifeWear Magazine. Projektet handlede om at eksperimentere med former, layout og farver for at skabe et nyt æstetisk udtryk, der stadig respekterede brandets visuelle identitet.",
+    "kompetencer":["FIGMA", "ILLUSTRATOR", "PHOTOSHOP"],
+    "year":"2025",
+    "purpose":" Udforske grafisk design gennem eksperimenter med typografi, komposition og farvepaletter samt opnå erfaring med at arbejde på tværs af forskellige programmer og værktøjer.",
+    "result":"Jeg har lært at bruge grafiske virkemidler til at ændre og styrke et eksisterende visuelt univers. Projektet har styrket mine færdigheder i layout, farvebrug og designprocesser på tværs af værktøjer."
   }
 ]

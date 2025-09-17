@@ -27,14 +27,16 @@ const ProjectSlider = () => {
         const sections = gsap.utils.toArray(".project-card")
 
         // Horisontal scroll
-        let scrollTween = gsap.to(container, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "",
+        let scrollTween = gsap.to('.projects-wrapper', {
+             x: () => -(container.scrollWidth - window.innerWidth),
+            ease: 'none',
             scrollTrigger: {
             trigger: ".project-slider",
             pin: true,
-            scrub: 1,
-            end: () => "+=" + container.offsetWidth,
+            scrub: 1.5,
+            anticipatePin: 1,
+            start: 'top 15%',
+             end: () => "+=" + (container.scrollWidth - window.innerWidth + 1000),
             onUpdate: (self) => {
             // beregn aktiv index baseret på scroll progress
             const newIndex = Math.round(self.progress * (sections.length - 1))
@@ -49,14 +51,6 @@ const ProjectSlider = () => {
     }
   }, [projects])
     
-    const prevSlide = () => {
-    setActiveIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1))
-  }
-
-  const nextSlide = () => {
-    setActiveIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1))
-  }
-
     return (
     <div className="project-slider">
      
@@ -70,16 +64,20 @@ const ProjectSlider = () => {
             }`}
           >
             <p>({String(project.id).padStart(2, "0")})</p>
-            <img src={project.image} alt={project.title} />
+            
+            <div className="image-wrapper">
+                <img src={project.image} alt={project.title} />
+
+                <div className="info-bar">
+                    <p>{project.tools.join(", ")}</p>
+                    <p>{project.services.join(", ")}</p>
+                </div>
+            </div>
+            
             <h2 className="text-marg">{project.title}</h2>
             <h2 className="text-padding"><i>{project.client}</i></h2>
           </NavLink>
         ))}
-      </div>
-
-      <div className="slider-controls">
-        <button onClick={prevSlide}>←</button>
-        <button onClick={nextSlide}>→</button>
       </div>
     </div>
   )
