@@ -25,8 +25,8 @@ const Footer = () => {
         <div className="kontakt">
           <p>(KONTAKTOPLYSNINGER)</p>
           <a href="mailto:youremail@example.com">Andreashansen@gmail.com</a>
-          <a href="https://www.linkedin.com/in/andreas-hansen-baab87372/">LinkedIn</a>
-          <a href="https://github.com/andreas893">GitHub</a>
+          <a href="https://www.linkedin.com/in/andreas-hansen-baab87372/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/andreas893" target="_blank">GitHub</a>
         </div>
 
       </div>

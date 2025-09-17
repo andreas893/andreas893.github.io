@@ -8,10 +8,6 @@
   --secondary-color: #D8F999;
   --tetriary-color: #111111;
   --color-text:#E0E0E0;
-  
- 
-
-  
 }
 
 
@@ -24,9 +20,7 @@ body{
     font-weight: bold;
 }
 
-body h1{
-    font-size: 5rem;
-}
+
 
 /* Nav styling */
 .navbar{
@@ -135,10 +129,10 @@ figure .landing-vid{
 /* Styling af headings */
 .heading{
     display: grid;
-    grid-template-columns: 2fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 0 1.6rem;
-    margin-top: -1.6rem;
+    margin-top: 3rem;
 }
 
 .heading-l-container {
@@ -146,13 +140,18 @@ figure .landing-vid{
   margin: 0;
 }
 
+.heading-l-container h1{
+    font-size: 5rem;
+    margin: 0;
+    align-self: flex-start;
+}
+
 .heading-s-container {
-    align-self: end;
+    justify-self: flex-end;
     font-size: 2rem;
     font-weight: bold;
     margin: 0;
-    padding-left: 1rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
 }
 
 .heading p{
@@ -161,11 +160,11 @@ figure .landing-vid{
     margin: 0;
 }
 
-.arrow {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+.arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 1rem;
 }
 
 .arrow-2{
@@ -433,7 +432,7 @@ figure .landing-vid{
 
 /* Footer shell */
 .footer {
-  background: #fff;
+  background: var(--primary-color);
   border-top: 1px solid #eaeaea;
   padding: 32px 16px;
 }

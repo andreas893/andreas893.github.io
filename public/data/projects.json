@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "number":"(01)",
+    "title": "BAG FACADEN",
+    "client": "STENO MUSEET",
+    "image": "home/bag-facaden.png"
+  },
+  {
+    "id": 2,
+    "number":"(02)",
+    "title": "GSAP PROJEKT",
+    "client": "SELVSTÆNDIGT",
+    "image": "/projects/gsap.png"
+  },
+  {
+    "id": 3,
+    "number":"(03)",
+    "title": "RADAR VENUE",
+    "client": "RADAR LIVE",
+    "image": "/projects/radar-live-2.png"
+  },
+  {
+    "id": 4,
+    "number":"(04)",
+    "title": "UNIQLO LIFEWEAR",
+    "client": "SELVSTÆNDIGT",
+    "image": "/projects/uniqlo.png"
+  }
+]

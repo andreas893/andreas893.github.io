@@ -1,0 +1,124 @@
+:root {
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --primary-color: #FCFCFC;
+  --bg-color: #2E2E2E;
+  --secondary-color: #D8F999;
+  --tetriary-color: #111111;
+  --color-text:#E0E0E0;
+}
+
+
+body{
+    font-family: var(--font-main);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+body h1{
+    font-size: 5rem;
+}
+
+
+.projekt-heading{
+    padding: 0 1.2rem;
+    margin-top: 2rem;
+}
+
+.projekt-heading h1{
+    margin: 0;
+}
+
+
+.project-slider img{
+    border-radius: 10px;
+}
+
+.project-card{
+    width: fit-content;
+    text-decoration: none;
+    color: #111111;
+}
+
+.project-card h2{
+    font-size: 2rem;
+}
+
+.project-card p, h2{
+    margin: 0;
+}
+
+.project-slider{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.projects-wrapper{
+    display: flex;
+    height: 100%;
+    padding: 2rem 1.2rem;
+}
+
+/* Hvert projekt fylder en viewport */
+.project-card {
+  flex: 0 0 30vw;
+  margin: 0 2vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-marg{
+    margin-top: -1rem;
+}
+
+.text-padding{
+    padding-left: 3rem;
+    margin-top: -1rem;
+}
+
+/* billedet centreres */
+.project-card img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* det aktive kort */
+.project-card.active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* knapperne nederst */
+.slider-controls {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.slider-controls button {
+  background: none;
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slider-controls button:hover {
+  background: #f0f0f0;
+}

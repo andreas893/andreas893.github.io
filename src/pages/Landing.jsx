@@ -18,18 +18,18 @@ const Landing = () => {
 
       <section className='heading'> 
         <div className='heading-l-container'>
-          <h1 className='heading-l'>JEG SKABER DIGITALE OPLEVELSER</h1>
+          <h1 className='heading-l'>FRONTEND & DESIGN</h1>
         </div> 
       
         <div className='heading-s-container'>
           <p className='heading-s'>Min passion er at forene design, frontend og animationer i løsninger, der både fungerer teknisk og gør indtryk visuelt.</p>
         </div>
       </section>
-      <div>
-        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 5v14m7-7-7 7-7-7"/>
-        </svg>
-      </div>
+       <div className='arrow-container'>
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 5v14m7-7-7 7-7-7"/>
+          </svg>
+        </div>
       <ProjectSection />
       <AboutContent />
       <Footer />
