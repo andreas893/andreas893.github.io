@@ -3,27 +3,33 @@ import Footer from "../components/Footer"
 import Nav from "../components/Nav"
 import { useEffect } from "react"
 import gsap from "gsap"
+import { ScrollTrigger } from "gsap/all"
 import "../slider.css";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-    useEffect(() => {
-    gsap.fromTo(
-    ".after-heading h1",
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".after-heading",
-        start: "top 80%",   // when this section scrolls into view
-        toggleActions: "play none none reverse"
-      }
-    }
-  )
-}, [])
+   useEffect(() => {
+    // select all h1s inside .projekt-heading
+    gsap.utils.toArray(".projekt-heading h1").forEach((heading) => {
+      gsap.fromTo(
+        heading,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay:1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: heading,
+            start: "top 85%", // fires when THIS heading scrolls in
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
 
 
 

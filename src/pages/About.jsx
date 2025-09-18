@@ -5,17 +5,98 @@ import TextSlider from '../components/TextSlider';
 import { NavLink } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useState } from 'react';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const About = () => {
   const [isDropped1, setIsDropped1] = useState(false);
   const [isDropped2, setIsDropped2] = useState(false);
   const [isDropped3, setIsDropped3] = useState(false);
+  const sectionRef = useRef();
+  const galleriRef = useRef();
+
+  useGSAP(() => {
+    const textElements = sectionRef.current.querySelectorAll(
+      ".ab-heading p, .a-text-1, .a-text-2, .nav-btn-2"
+    );
+
+    gsap.from(textElements, {
+      scaleY: 0,             
+      transformOrigin: "bottom", 
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.from(sectionRef.current.querySelector(".a-grid-item-2 img"), {
+      y: 100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      delay: 0.6, // starts after some text has animated
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+   
+    gsap.from(galleriRef.current.querySelectorAll(".galleri-content > *"), {
+      y: 60,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: galleriRef.current,
+        start: "top 80%",
+      },
+    });
+
+    gsap.from(galleriRef.current.querySelectorAll(".about-img-container img"), {
+  y: 40,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: galleriRef.current,
+    start: "top 80%",
+  },
+});
+
+
+    gsap.from(galleriRef.current.querySelector(".drag-text h2"), {
+      scaleY: 0,
+      transformOrigin: "bottom",
+      opacity: 0,
+      skewY: 8,
+      duration: 1,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: galleriRef.current.querySelector(".drag-text"),
+        start: "top 85%",
+      },
+    });
+    
+  }, []);
 
 
   return (
     <main>
       <Nav />
-      <section className='about-hero'>
+      <section className='about-hero' ref={sectionRef}>
         
         <div className='a-hero-grid'>
           
@@ -38,7 +119,7 @@ const About = () => {
           </div>
           
           <div className='a-grid-item-2'>
-            <img src="/about/about-1.png" alt="about-pic" />
+            <img loading='lazy' src="/about/about-1.png" alt="about-pic" />
           </div>
         </div>
       </section>
@@ -48,7 +129,7 @@ const About = () => {
         <TextSlider />
       </div>
 
-      <section className='about-galleri'>
+      <section className='about-galleri' ref={galleriRef}>
         <div className='galleri-content'>
            <h2>MIN PROCES</h2>
            <p className='galleri-text-1'>Mit arbejde handler ikke kun om programmering og design, men om de historier, stemninger og idéer, der driver mig. </p>
@@ -106,6 +187,6 @@ const About = () => {
       <Footer />
     </main>
   )
-}
+};
 
-export default About
+export default About;

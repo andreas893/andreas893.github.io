@@ -4,6 +4,11 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import "../details.css";
 import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ProjectDetails = () => {
     const { id } = useParams();

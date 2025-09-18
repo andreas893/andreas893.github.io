@@ -20,41 +20,51 @@ const ProjectSlider = () => {
     }, [])
 
 
-    useEffect(() => {
-        if (projects.length === 0) return // vent til data er hentet
+  useEffect(() => {
+  if (projects.length === 0) return;
 
-        if (window.innerWidth <= 860) return
+  const container = document.querySelector(".projects-wrapper");
+  const sections = gsap.utils.toArray(".project-card");
 
-        const container = document.querySelector(".projects-wrapper")
-        const sections = gsap.utils.toArray(".project-card")
+  // Only run horizontal scroll on large screens
+  let scrollTween;
+  if (window.innerWidth > 860) {
+    scrollTween = gsap.to(".projects-wrapper", {
+      id: "sliderAnim",
+      x: () => -(container.scrollWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".project-slider",
+        pin: true,
+        scrub: 1.5,
+        anticipatePin: 1,
+        start: "top 15%",
+        end: () => "+=" + (container.scrollWidth - window.innerWidth + 1000),
+        onUpdate: (self) => {
+          const newIndex = Math.round(self.progress * (sections.length - 1));
+          setActiveIndex(newIndex);
+        },
+      },
+    });
+  }
 
-        // Horisontal scroll
-        let scrollTween = gsap.to('.projects-wrapper', {
-             x: () => -(container.scrollWidth - window.innerWidth),
-            ease: 'none',
-            scrollTrigger: {
-            trigger: ".project-slider",
-            pin: true,
-            scrub: 1.5,
-            anticipatePin: 1,
-            start: 'top 15%',
-             end: () => "+=" + (container.scrollWidth - window.innerWidth + 1000
+  // Animate cards on load (all screen sizes)
+  gsap.from(".project-card", {
+    opacity: 0,
+    y: 60,
+    scale: 0.95,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.2,
+    delay: 0.3, // small delay to ensure DOM is ready
+  });
 
-             ),
-            onUpdate: (self) => {
-            // beregn aktiv index baseret på scroll progress
-            const newIndex = Math.round(self.progress * (sections.length - 1))
-            setActiveIndex(newIndex)
-            }
-      }
-    })
-
-    return () => {
-      scrollTween.scrollTrigger?.kill()
-      scrollTween.kill()
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    }
-  }, [projects])
+  return () => {
+    scrollTween?.scrollTrigger?.kill();
+    scrollTween?.kill();
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  };
+}, [projects]);
     
     return (
     <div className="project-slider">

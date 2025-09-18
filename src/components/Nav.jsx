@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"
 import { useGSAP } from "@gsap/react"
@@ -10,7 +10,7 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     useGSAP(() => {
-    // Animate logo
+
     gsap.from(".logo a", {
       y: -100,
       opacity: 0,
@@ -18,7 +18,7 @@ const Nav = () => {
       ease: "expo.out",
     });
 
-    // Split nav links into characters
+
     const navSplit = new SplitText(".nav-links a", { type: "lines" });
 
     gsap.from(navSplit.lines, {
@@ -30,7 +30,7 @@ const Nav = () => {
       delay: 0.8
     });
 
-    // Animate right-side buttons (e.g. GET IN TOUCH)
+ 
     gsap.from(".nav-btns", {
       y: 30,
       opacity: 0,
@@ -39,6 +39,34 @@ const Nav = () => {
       delay: 0.8,
     });
   }, []);
+
+    useEffect(() => {
+    if (isOpen) {
+      // open animation
+      gsap.fromTo(
+        ".menu-dropdown",
+        { y: "-100%", opacity: 0 },
+        { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" }
+      );
+
+      gsap.from(".menu-dropdown ul li", {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.1,
+        delay: 0.2,
+      });
+    } else {
+      // close animation
+      gsap.to(".menu-dropdown", {
+        y: "-100%",
+        opacity: 0,
+        duration: 0.5,
+        ease: "power3.in",
+      });
+    }
+  }, [isOpen]);
     
   return (
     <header>    

@@ -317,7 +317,7 @@ figure .landing-vid{
     margin: 0;
 }
 
-.content-1 img{
+.content-1 a img{
     width: 67%;
     border-radius: 10px;
 
@@ -338,7 +338,7 @@ figure .landing-vid{
     padding-left: 2rem;
 }
 
-.content-2 img{
+.content-2 a img{
     width: 74%;
     border-radius: 10px;
     padding-right: 2px;
@@ -379,25 +379,26 @@ figure .landing-vid{
     padding-right: 12rem;
 }
 
-.s-content-1 img{
+.s-content-1 a img{
     width: 30em;
     height: 25em;
     border-radius: 10px;
+
 }
 
 
 .s-content-2{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 1.1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 2rem;
 }
 
-.s-content-2 img{
+.s-content-2 a img{
     border-radius: 10px;
     width: 80%;
     height: 25em;
-      
+    
 }
 
 
@@ -855,17 +856,17 @@ width: 90%;
     align-items: end;
 }
 
-.content-1 img{
+.content-1 a img{
     width: 95%;
 }
 
-.content-2 img{
+.content-2 a img{
     align-self: flex-end;
     width: 90%;
     justify-self: center;
 }
 
-.s-content-1 img{
+.s-content-1 a img{
     width: 100%;
     align-self: flex-start;
 }
@@ -875,7 +876,7 @@ width: 90%;
     padding: 0;
 }
 
-.s-content-2 img{
+.s-content-2 a img{
     width: 100%;
     align-self: flex-start;
 }
@@ -1192,11 +1193,11 @@ width: 90%;
     align-items: end;
 }
 
-.content-1 img{
+.content-1 a img{
     width: 95%;
 }
 
-.content-2 img{
+.content-2 a img{
     align-self: flex-end;
     width: 90%;
     justify-self: center;
@@ -1212,7 +1213,7 @@ width: 90%;
     padding: 0;
 }
 
-.s-content-1 img{
+.s-content-1 a img{
     width: 100%;
     align-self: flex-start;
 }
@@ -1222,7 +1223,7 @@ width: 90%;
     padding: 0;
 }
 
-.s-content-2 img{
+.s-content-2 a img{
     width: 90%;
 }
 

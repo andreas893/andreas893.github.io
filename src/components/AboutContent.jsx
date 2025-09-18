@@ -1,8 +1,58 @@
-import { NavLink } from "react-router-dom"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+import { NavLink } from "react-router-dom";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const AboutContent = () => {
+    const aboutRef = useRef();
+
+  
+  useGSAP(() => {
+    // Whole section reveal
+    gsap.fromTo(
+      aboutRef.current,
+      {
+        y: 200,
+        scale: 0.85,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 90%",
+          end: "top 20%",
+          scrub: true,
+        },
+      }
+    );
+
+
+    gsap.from(
+      aboutRef.current.querySelectorAll(".about-grid, .about-grid-2"),
+      {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 80%", 
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="about">
+    <section className="about" ref={aboutRef}>
      
         <div className="about-head">
             <p className="a-head-1">HVEM</p>
