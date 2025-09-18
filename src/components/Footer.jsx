@@ -5,7 +5,7 @@ const Footer = () => {
       
       <div className='footer-grid'>
       
-        <div>
+        <div className="footer-logo">
           <img src="/footer-img.png" alt="grafik" />
           <span className='logo'>AH</span>
           <span>&copy; Andreas Hansen Portfolio 2025</span>

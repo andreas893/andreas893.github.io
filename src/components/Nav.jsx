@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom"
-
+import { useState } from "react"
 
 const Nav = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    
   return (
     <header>    
         <nav className='navbar'>
@@ -13,25 +15,25 @@ const Nav = () => {
             </div>
                 
             
-            <div className="nav-links-container">
+            <div className={`nav-links-container ${isOpen ? "show" : ""}`}>
                 <ul className="nav-links">
                     <li>
-                        <NavLink to="/" end>
+                        <NavLink to="/" end onClick={() => setIsOpen(false)}>
                             HOME,
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/om">
+                        <NavLink to="/om" onClick={() => setIsOpen(false)}>
                             OM MIG,
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/projekter">
+                        <NavLink to="/projekter " onClick={() => setIsOpen(false)}>
                             PROJEKTER,
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/kontakt">
+                        <NavLink to="/kontakt" onClick={() => setIsOpen(false)}>
                             KONTAKT
                         </NavLink>
                     </li>
@@ -39,16 +41,39 @@ const Nav = () => {
             </div>
             
 
-            <div className="nav-btns">
+           <div className="nav-btns">
                 <img className="nav-img" src="/music-icon.png" alt="music-icon" />
-
                 <a href="mailto:youremail@example.com" className="nav-btn">
                     <div><p>GET IN TOUCH</p></div>
                     <span></span>
                 </a>
-            </div>
-                
+
+          {/* Burger only for mobile */}
+          <button 
+            className={`menu-btn ${isOpen ? "open" : ""}`} 
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            MENU <span className="plus">+</span>
+          </button>
+        </div>
         </nav>
+
+        <div className={`menu-dropdown ${isOpen ? "show" : ""}`}>
+            <div className="close-btn">
+                <span className="logo logo-white">
+                        <NavLink to="/" end className="logo">AH</NavLink>
+                    </span>
+                <button onClick={() => setIsOpen(false)}>CLOSE</button>
+            </div>
+
+            <ul>
+            <li><NavLink to="/" end onClick={() => setIsOpen(false)}>(HOME)</NavLink></li>
+            <li><NavLink to="/om" onClick={() => setIsOpen(false)}>(OM MIG)</NavLink></li>
+            <li><NavLink to="/projekter" onClick={() => setIsOpen(false)}>(PROJEKTER)</NavLink></li>
+            <li><NavLink to="/kontakt" onClick={() => setIsOpen(false)}>(KONTAKT</NavLink></li>
+            </ul>
+      </div>
     </header>    
   )
 }

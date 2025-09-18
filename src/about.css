@@ -45,7 +45,7 @@ body h1{
 
 .ab-h2 {
   font-size: 5rem;
-  margin-top: -1rem;
+  margin-top: -5rem;
   margin-bottom: 2rem;
   padding-left: 3rem;
 }
@@ -59,33 +59,33 @@ body h1{
 .a-grid-item-2{
     display: flex;
     align-items: flex-end;
+    width: fit-content;
 }
 
 .a-hero-grid {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
-  padding: 0 2rem 0 2rem;
-  grid-template-columns: 2fr 1fr;    
+  grid-template-columns: 1.4fr 1fr;    
 }
 
 .a-grid-item-1 p{
-    width: 60%;
+    width: 70%;
 }
 
 .a-text-1, .a-text-2{
       line-height: 2;
+      font-size: 1.2rem;
 }
 
 .a-text-2{
     padding-left: 2rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     justify-self: center;
 }
 
 .nav-btn-2{
     justify-self: flex-start;
-    margin-left: 9rem;
+    margin-left: 8rem;
      white-space: nowrap;
 }
 
@@ -122,10 +122,15 @@ body h1{
     padding: 3rem 1rem 2rem 1rem;
     border-radius: 20px;
     margin-top: 3rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     line-height: 2;
+}
+
+.about-galleri p{
+  font-size: 1.2rem;
 }
 
 .about-galleri h2{

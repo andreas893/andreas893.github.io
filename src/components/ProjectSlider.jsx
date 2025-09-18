@@ -23,6 +23,8 @@ const ProjectSlider = () => {
     useEffect(() => {
         if (projects.length === 0) return // vent til data er hentet
 
+        if (window.innerWidth <= 860) return
+
         const container = document.querySelector(".projects-wrapper")
         const sections = gsap.utils.toArray(".project-card")
 
@@ -77,6 +79,7 @@ const ProjectSlider = () => {
             
             <h2 className="text-marg">{project.title}</h2>
             <h2 className="text-padding"><i>{project.client}</i></h2>
+             <span className="see-project">Se projekt →</span>
           </NavLink>
         ))}
       </div>

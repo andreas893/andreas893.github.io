@@ -23,6 +23,13 @@ body{
 
 
 /* Nav styling */
+.menu-btn {
+  display: none;
+}
+
+.menu-dropdown{
+    display: none;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -360,6 +367,11 @@ figure .landing-vid{
 
 
 /* about styling */
+
+.about{
+    padding-bottom: 2rem;
+}
+
 .about-head{
     display: flex;
   flex-direction: column; /* stack items vertically */
@@ -526,3 +538,634 @@ figure .landing-vid{
   text-decoration: underline;
 }
 
+@media (max-width: 767px) {
+
+
+    .logo-container .logo{
+        font-size: 3rem;
+    }
+
+    .nav-links a{
+        font-size: 0.8rem;
+    }
+    
+    .front-vid video{
+        max-width: 100%;
+    }
+
+    .front-vid{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    } 
+
+    .vid-section{
+        margin-top: 2rem;
+    }
+
+    .nav-btn{
+        font-size: 0.8rem;
+        min-width: 8rem;
+        max-width: fit-content;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        height: 2.4rem;
+    }
+    .nav-btn span{
+        display: none;
+    }
+
+    .nav-btn p{
+        margin: 0;
+    }
+
+
+    .nav-img{
+        display: none;
+    }
+
+      .nav-links-container {
+    display: none;
+  }
+
+  .logo-white .logo{
+    color: var(--primary-color);
+  }
+
+  /* Show burger button beside Get in Touch */
+  .menu-btn {
+    padding: 0.5rem 1rem;
+    background: var(--tetriary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .menu-btn .plus {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .menu-dropdown {
+    display: none;
+
+    position: absolute;      /* take it out of document flow */
+    top: 1rem;               /* adjust to match your navbar height */
+    right: 1rem;
+    background: var(--tetriary-color);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    z-index: 1000;
+    width: 250px;            /* fixed width or whatever you like */
+    height: 0;               /* collapsed at first */
+    overflow: hidden;        /* hide content until expanded */
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu-dropdown.show {
+  display: block;
+  height: 40vh;
+  opacity: 1;
+}
+
+  .menu-dropdown ul {
+    list-style: none;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-dropdown ul a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  .close-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .close-btn button{
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  @keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+  
+.heading{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.heading p{
+    line-height: 1.5;
+}
+
+.heading-l-container h1 {
+    font-size:3rem;
+}
+
+.heading-l-container{
+    width: 100%;
+}
+
+.heading-s-container p{
+    font-size: 2rem;
+}
+
+/* styling af projekt-section */
+    .projekter{
+        margin-top: 2rem;
+        background: var(--primary-color);
+    }
+.p-head p{
+    font-size: 3rem;
+}
+
+.p-head{ 
+    padding: 0;
+}
+
+.p-head-2{
+    margin-top: -3rem;
+    margin-left: 5.5rem;
+    padding: 0;
+}
+
+.number{
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.f-grid h2, span{
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+.f-grid span{
+    padding: 0;
+}
+
+
+.content-1, .content-2{
+    padding: 0;
+}
+
+.content-1 p{
+width: 90%;
+}
+
+.content-2{
+    align-items: end;
+}
+
+.content-1 img{
+    width: 95%;
+}
+
+.content-2 img{
+    align-self: flex-end;
+    width: 90%;
+    justify-self: center;
+}
+
+.s-content-1 img{
+    width: 100%;
+    align-self: flex-start;
+}
+
+.s-content-1 p{
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+.s-content-2 img{
+    width: 100%;
+    align-self: flex-start;
+}
+
+.s-content-2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem 0 0 0;
+    margin: 0;
+}
+
+.grid-heading{
+    margin-top: 3rem;
+    padding: 0;
+}
+
+.grid-heading h2{
+    font-size: 1.6rem;
+}
+
+.h-2{
+    padding: 0;
+}
+
+.h-2 span{
+    padding: 0;
+}
+
+.s-grid{
+  display: flex;
+  flex-direction: column;
+    margin-bottom: 2rem;
+
+}
+
+.s-content-1{
+    padding: 0;
+}
+
+/* styling af about */
+.about-head p{
+    font-size: 3rem;
+}
+
+.a-head-2{
+    padding-left: 3rem;
+}
+
+.about-grid h2{
+    font-size: 1.6rem;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.about-grid-2{
+    grid-row: 1;
+    width: fit-content;
+    height: fit-content;
+   display: flex;
+
+}
+
+.about-img{
+    display: flex;
+    justify-content: center;
+}
+
+.about-img img{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+.about-grid{
+    padding-top: 1rem;
+    
+}
+
+.about-grid p{
+    font-size: 1.2rem;
+}
+
+.tekst-2{
+    padding:0;
+    padding-top: 1rem;
+}
+
+
+/* styling af footer */
+    .footer-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width:1023px){
+    
+    .logo-container .logo{
+        font-size: 3rem;
+    }
+
+    .nav-links a{
+        font-size: 0.8rem;
+    }
+    
+    .front-vid video{
+        max-width: 100%;
+    }
+
+    .front-vid{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    } 
+
+    .vid-section{
+        margin-top: 2rem;
+    }
+
+    .landing-vid-container{
+        width: 100%;
+    }
+
+    .nav-btn{
+        font-size: 0.8rem;
+        min-width: 8rem;
+        max-width: fit-content;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        height: 2.4rem;
+    }
+    .nav-btn span{
+        display: none;
+    }
+
+    .nav-btn p{
+        margin: 0;
+    }
+
+
+    .nav-img{
+        display: none;
+    }
+
+      .nav-links-container {
+    display: none;
+  }
+
+  .logo-white .logo{
+    color: var(--primary-color);
+  }
+
+  /* Show burger button beside Get in Touch */
+  .menu-btn {
+    padding: 0.5rem 1rem;
+    background: var(--tetriary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .menu-btn .plus {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .menu-dropdown {
+    display: none;
+
+    position: absolute;      /* take it out of document flow */
+    top: 1rem;               /* adjust to match your navbar height */
+    right: 1rem;
+    background: var(--tetriary-color);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    z-index: 1000;
+    width: 250px;            /* fixed width or whatever you like */
+    height: 0;               /* collapsed at first */
+    overflow: hidden;        /* hide content until expanded */
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu-dropdown.show {
+  display: block;
+  height: 40vh;
+  opacity: 1;
+}
+
+  .menu-dropdown ul {
+    list-style: none;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-dropdown ul a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  .close-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .close-btn button{
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  @keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+    }
+    
+    .heading{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0 2rem;
+}
+
+    .heading p{
+        line-height: 1.5;
+    }
+
+    .heading-l-container h1 {
+        font-size:3rem;
+    }
+
+    .heading-l-container{
+        width: 100%;
+    }
+
+    .heading-s-container p{
+        font-size: 2rem;
+    }
+
+    /* styling af projekt-section */
+    .projekter{
+        margin-top: 2rem;
+        background: var(--primary-color);
+    }
+.p-head p{
+    font-size: 3rem;
+}
+
+.p-head{ 
+    padding: 0;
+}
+
+.p-head-2{
+    margin-top: -3rem;
+    margin-left: 5.5rem;
+    padding: 0;
+}
+
+.number{
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.f-grid h2, span{
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+.f-grid span{
+    padding: 0;
+}
+
+
+.content-1, .content-2{
+    padding: 0;
+}
+
+.content-1 p{
+width: 90%;
+}
+
+.content-2{
+    align-items: end;
+}
+
+.content-1 img{
+    width: 95%;
+}
+
+.content-2 img{
+    align-self: flex-end;
+    width: 90%;
+    justify-self: center;
+    margin-top: 1.8rem;
+}
+
+.s-grid{
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.s-content-1{
+    padding: 0;
+}
+
+.s-content-1 img{
+    width: 100%;
+    align-self: flex-start;
+}
+
+.s-content-1 p{
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.s-content-2 img{
+    width: 90%;
+}
+
+.s-content-2{
+    display: flex;
+    align-items:start;
+    justify-content: end;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-heading{
+    margin-top: 3rem;
+    padding: 0;
+}
+
+.grid-heading h2{
+    font-size: 1.6rem;
+}
+
+.h-2{
+    padding: 0;
+}
+
+.h-2 span{
+    padding: 0;
+}
+
+/* styling af about */
+.about-head p{
+    font-size: 3rem;
+}
+
+.about-content{
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1rem;
+}
+
+.about-grid p{
+    font-size: 1.2rem;
+}
+.tekst-2{
+    padding-top:4rem;
+    padding-left: 2rem;
+}
+
+.about-grid-2{
+    width: fit-content;
+}
+
+.projekt-btn-container-2{
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+    
+    .footer-grid{
+        display: grid;
+        max-width: 100%;
+    }
+}

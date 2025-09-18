@@ -3,6 +3,7 @@ import Footer from "../components/Footer"
 import Nav from "../components/Nav"
 import { useEffect } from "react"
 import gsap from "gsap"
+import "../slider.css";
 
 
 const Projects = () => {
