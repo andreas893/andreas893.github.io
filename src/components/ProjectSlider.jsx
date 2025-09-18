@@ -48,6 +48,7 @@ const ProjectSlider = () => {
     return () => {
       scrollTween.scrollTrigger?.kill()
       scrollTween.kill()
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     }
   }, [projects])
     
@@ -66,7 +67,7 @@ const ProjectSlider = () => {
             <p>({String(project.id).padStart(2, "0")})</p>
             
             <div className="image-wrapper">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image[0]} alt={project.title} />
 
                 <div className="info-bar">
                     <p>{project.tools.join(", ")}</p>

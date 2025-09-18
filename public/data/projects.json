@@ -7,7 +7,7 @@
     "services":["UX Design", "Graphic Design"],
     "tools":["JavaScript", "Figma","CSS&HTML"],
     "image": ["home/bag-facaden.png", "/details/bag-facaden-1.png", "/details/bag-facaden-2.png", "/details/bag-facaden-3.png", "/details/bag-facaden-4.png"],
-    "opgaven":"Under Huden er udviklet i samarbejde med Steno Museet og sætter fokus på social angst. Projektet undersøger, hvordan følelser kan visualiseres gennem grafiske elementer og video, for at skabe en oplevelse, der formidler emnet på en nærværende og visuel måde.",
+    "opgaven":"Bag Facaden er udviklet i samarbejde med Steno Museet og sætter fokus på social angst. Projektet undersøger, hvordan følelser kan visualiseres gennem grafiske elementer og video, for at skabe en oplevelse, der formidler emnet på en nærværende og visuel måde.",
     "kompetencer":["HTML", "CSS", "JS", "FIGMA", "BRUGERCENTRERET DESIGN"],
     "year":"2025",
     "purpose":"Formålet med Bag Facaden var at skabe en interaktiv oplevelse for Steno Museet, der kunne formidle social angst på en nærværende og visuelt stærk måde gennem grafik, video og storytelling.",
@@ -21,7 +21,7 @@
     "client": "SELVSTÆNDIGT",
     "services":["Motion Design", "Animation"],
     "tools":["GSAP", "REACT", "Tailwind CSS"],
-    "image":["/projects/gsap.png", "/details/gsap-1.png", "/details/gsap-2.png", "/details/gsap-3.png", "/details/gsap-4.png",],
+    "image":["/projects/gsap.png", "/details/gsap-1.png", "/details/gsap-2.png", "/details/gsap-3.png", "/details/gsap-4.png"],
     "opgaven":"Projektet bestod i at designe og programmere en landing page i REACT for en fiktiv cocktailbar. Der var særligt fokus på at integrere motion og GSAP-animation som en central del af oplevelsen. Projektet er lavet med udgangspunkt i “JSmastery GSAP Course” Youtube video.",
     "kompetencer":["GSAP", "REACT", "TAILWIND-CSS", "JS", "FIGMA", "MOTIONDESIGN"],
     "year":"2025",
@@ -36,7 +36,7 @@
     "client": "RADAR LIVE",
     "services":["UX Design", "Redesign"],
     "tools":["Figma","CSS&HTML"],
-    "image":["/projects/radar-livetwo.png", "/details/radar-img-1.png", "/details/radar-img-2.png", "/details/radar-img-3.png", "/details/radar-img-4.png"],
+    "image":["/projects/radar-live-two.png", "/details/radar-img-1.png", "/details/radar-img-2.png", "/details/radar-img-3.png", "/details/radar-img-4.png"],
     "opgaven":"At udvikle en digital løsning for spillestedet Radar ved Godsbanen i Aarhus, som er et fællesskab for unge og en platform for niche- og upcoming musik. Projektet handlede om at formidle Radars værdier og gøre information om koncerter mere tilgængelig.",
     "kompetencer":["HTML", "CSS", "FIGMA", "BRUGERCENTRERET DESIGN"],
     "year":"2024",
@@ -51,11 +51,12 @@
     "client": "SELVSTÆNDIGT",
     "services":["Graphic Design"],
     "tools":["PhotoShop", "Figma","Illustrator"],
-    "image":["/projects/uniqlo.png", "/details/lifewear-img.png", "/details/lifewear-img-2.png", "/details/lifewear-img-3.png", "/details/lifewear-img-4.png", "/details/lifewear-img-5.png",],
+    "image":["/projects/uniqlo.png", "/details/lifewear-img-2.png", "/details/lifewear-img-3.png", "/details/lifewear-img-4.png", "/details/lifewear-img-5.png"],
     "opgaven":"At redesigne forsiden og det visuelle udtryk for Uniqlo’s LifeWear Magazine. Projektet handlede om at eksperimentere med former, layout og farver for at skabe et nyt æstetisk udtryk, der stadig respekterede brandets visuelle identitet.",
     "kompetencer":["FIGMA", "ILLUSTRATOR", "PHOTOSHOP"],
     "year":"2025",
     "purpose":" Udforske grafisk design gennem eksperimenter med typografi, komposition og farvepaletter samt opnå erfaring med at arbejde på tværs af forskellige programmer og værktøjer.",
-    "result":"Jeg har lært at bruge grafiske virkemidler til at ændre og styrke et eksisterende visuelt univers. Projektet har styrket mine færdigheder i layout, farvebrug og designprocesser på tværs af værktøjer."
+    "result":"Jeg har lært at bruge grafiske virkemidler til at ændre og styrke et eksisterende visuelt univers. Projektet har styrket mine færdigheder i layout, farvebrug og designprocesser på tværs af værktøjer.",
+    "video":"/details/lifewear-vid.mp4"
   }
 ]
