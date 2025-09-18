@@ -26,7 +26,7 @@ const Landing = () => {
         </div>
       </section>
        <div className='arrow-container'>
-          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
+          <svg className="arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
             <path d="M12 5v14m7-7-7 7-7-7"/>
           </svg>
         </div>

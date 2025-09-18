@@ -65,3 +65,62 @@ body h1{
     color: var(--tetriary-color);
     font-size: 3rem;
 }
+
+@media (max-width:767px){
+    .kontakt-heading p{
+        font-size: 3rem;
+    }
+
+    .ab-h2{
+        padding:0;
+        margin: 0;
+        margin-top: -3rem;
+    }
+
+    .oplysninger{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .k-grid-item-1 p{
+        margin: 0;
+    }
+    .k-grid-item-2 a{
+        font-size: 2rem;
+    }
+
+    .arrow-kontakt{
+        rotate: 90deg;
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+     .kontakt-heading p{
+        font-size: 3rem;
+    }
+
+    .ab-h2{
+        padding:0;
+        margin: 0;
+        margin-top: -3rem;
+    }
+
+    .oplysninger{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .k-grid-item-1 p{
+        margin: 0;
+    }
+    .k-grid-item-2 a{
+        font-size: 2rem;
+    }
+
+    .arrow-kontakt{
+        rotate: 90deg;
+    }
+}
+

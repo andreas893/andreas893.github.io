@@ -116,17 +116,23 @@ body h1{
 
 /* proces styling */
 .about-galleri{
-    background-image: url(/public/about/noise.png);
+  background-color: var(--tetriary-color);
     background-position: center;
     color: var(--primary-color);
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 2rem;
     border-radius: 20px;
     margin-top: 3rem;
     margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     line-height: 2;
+      transform: translateZ(0);
+}
+
+.galleri-content{
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .about-galleri p{
@@ -139,9 +145,15 @@ body h1{
 }
 
 
-.about-img-container{
-    display: grid;
-    place-items: center;
+.about-img-container {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;       /* let them overlap naturally */
+  width: 100%;
+  height:100%;            /* enough space for dragging */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .galleri-text-1{
@@ -149,33 +161,32 @@ body h1{
 }
 
 
+/* Shared styles */
 .about-img-container img {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  position: absolute;
   width: 60%;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  width: 400px;   /* fixed width */
+  height: 400px;  /* fixed height */
+  object-fit: cover; /* crop instead of stretch */
   cursor: grab;
+  transition: box-shadow 0.2s ease;
 }
 
-.about-img-container img:nth-child(1) {
-  transform: rotate(-6deg) translate(-20px, -10px);
-  z-index: 1;
-}
-.about-img-container img:nth-child(2) {
-  transform: rotate(4deg);
-  z-index: 2;
-}
-.about-img-container img:nth-child(3) {
-  transform: rotate(8deg) translate(20px, 10px);
-  z-index: 3;
+.drag-text{
+  grid-row: 2;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-self: end;
+  margin: 0;
+  padding: 0;
 }
 
-/* hover: bring to front */
-.about-img-container img:hover {
-  transform: scale(1.05);
-  z-index: 10;
+.drag-text h2{
+  font-size: 8rem;
+  margin: 0 auto;
 }
 
 

@@ -38,7 +38,9 @@ const ProjectSlider = () => {
             scrub: 1.5,
             anticipatePin: 1,
             start: 'top 15%',
-             end: () => "+=" + (container.scrollWidth - window.innerWidth + 1000),
+             end: () => "+=" + (container.scrollWidth - window.innerWidth + 1000
+
+             ),
             onUpdate: (self) => {
             // beregn aktiv index baseret på scroll progress
             const newIndex = Math.round(self.progress * (sections.length - 1))

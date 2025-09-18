@@ -71,7 +71,7 @@ const Nav = () => {
             <li><NavLink to="/" end onClick={() => setIsOpen(false)}>(HOME)</NavLink></li>
             <li><NavLink to="/om" onClick={() => setIsOpen(false)}>(OM MIG)</NavLink></li>
             <li><NavLink to="/projekter" onClick={() => setIsOpen(false)}>(PROJEKTER)</NavLink></li>
-            <li><NavLink to="/kontakt" onClick={() => setIsOpen(false)}>(KONTAKT</NavLink></li>
+            <li><NavLink to="/kontakt" onClick={() => setIsOpen(false)}>(KONTAKT)</NavLink></li>
             </ul>
       </div>
     </header>    
