@@ -100,29 +100,15 @@ body h1{
   z-index: 2;
 }
 
-/* knapperne nederst */
-.slider-controls {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1rem;
+
+/* image hover */
+
+.horisontal-container img{
+     transition: border-radius 0.4s ease, transform 0.4s ease;
 }
 
-.slider-controls button {
-  background: none;
-  border: 1px solid #333;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.slider-controls button:hover {
-  background: #f0f0f0;
+.horisontal-container img:hover{  
+  transform: scale(1.03); /* optional: subtle zoom */
 }
 
 .after-heading {

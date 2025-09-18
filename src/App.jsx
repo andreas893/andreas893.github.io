@@ -4,6 +4,8 @@ import About from "./pages/About"
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
 import ProjectDetails from "./pages/ProjectDetails";
+import Cursor from "./components/Cursor"
+import ScrollReset from "./components/scrollReset"
 
 
 
@@ -14,6 +16,8 @@ function App() {
   return (
     <>
       <main>
+        <Cursor />
+        <ScrollReset />
         <Routes>
           <Route path="/" element={<Landing />}/>
           <Route path="/om" element={<About />}/>

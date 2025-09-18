@@ -11,6 +11,7 @@
 }
 
 
+
 body{
     font-family: var(--font-main);
     padding: 0 1rem 0 1rem;
@@ -65,9 +66,41 @@ body{
 
 .nav-links a{
     text-decoration: none;
+    position: relative;
+    display: inline-block;
     color: #111111;
     font-weight: bold;
     padding: 0.2rem;
+}
+
+
+/* hidden underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;                       /* sits right under text */
+  width: 80%;
+  height: 2px;
+  background-color: var(--tetriary-color);
+   transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* animate underline on hover */
+.nav-links a:hover::after{       /* active = NavLink from React Router */
+   transform: translateX(-50%) scaleX(1);
+}
+
+
+.nav-links a.active{
+    text-decoration: none;
+    
+}
+
+.nav-links a.active::after {
+  transform: translateX(-50%) scaleX(0); /* ✅ force underline hidden */
 }
 
 .nav-btns{
@@ -95,6 +128,38 @@ body{
     color: #111111;
     background-color: var(--secondary-color);
     font-weight: bold;
+    overflow: hidden;
+}
+
+.text-anim {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.text-anim p {
+  margin: 0;
+  transition: all 1.125s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+.text-anim p:nth-child(1) {
+  transform: translateY(0);
+}
+
+.text-anim p:nth-child(2) {
+  position: absolute;
+  top: 1.5em; 
+  left: 0;
+}
+
+
+.nav-btn:hover .text-anim p:nth-child(1) {
+  transform: translateY(-1.5em);
+}
+
+.nav-btn:hover .text-anim p:nth-child(2) {
+  top: 0;
 }
 
 .nav-btn p{
@@ -358,16 +423,30 @@ figure .landing-vid{
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 2rem;
+    transition: all 0.6s ease;
 }
 
 .projekt-btn .arrow-2 {
     transform: rotate(0deg);
+     transition: all 0.6s ease;
 }
 
 .projekt-btn:hover {
-  background-color: #333333;
+  background-color: #464646;
 }
 
+.projekt-btn:hover svg {
+  transform: translateX(5px);
+}
+
+.projekter img{
+     transition: border-radius 0.4s ease, transform 0.4s ease;
+}
+
+.projekter img:hover{  
+     border-radius: 20%;   /* make it circular */
+  transform: scale(1.03); /* optional: subtle zoom */
+}
 
 /* about styling */
 
@@ -512,16 +591,30 @@ figure .landing-vid{
 
 .footer-nav a {
   color: #111;
+  position: relative;
   text-decoration: none;
   font-size: 1rem;
   transition: color .2s ease, border-color .2s ease;
 }
 
-.footer-nav a:hover,
-.footer-nav a:focus {
-  color: #000;
-  text-decoration: underline;
-  outline: none;
+
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;                     
+  width: 100%;
+  height: 2px;
+  background-color: var(--tetriary-color);
+   transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* animate underline on hover */
+.footer-nav a:hover::after,
+.footer-nav a.active::after {       /* active = NavLink from React Router */
+   transform: translateX(-50%) scaleX(1);
 }
 
 /* --- Column 3: contact --- */
@@ -533,12 +626,28 @@ figure .landing-vid{
 .kontakt a {
   color: #111;
   text-decoration: none;
+  position: relative;
   font-size: 1rem;
+  width: fit-content;
 }
 
-.kontakt a:hover,
-.kontakt a:focus {
-  text-decoration: underline;
+.kontakt a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;                     
+  width: 100%;
+  height: 2px;
+  background-color: var(--tetriary-color);
+   transform: translateX(-50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* animate underline on hover */
+.kontakt a:hover::after,
+.kontakt a.active::after {       /* active = NavLink from React Router */
+   transform: translateX(-50%) scaleX(1);
 }
 
 @media (max-width: 767px) {
@@ -826,7 +935,7 @@ width: 90%;
     grid-template-rows: auto auto;
     justify-content: center;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
 }
 
@@ -835,6 +944,8 @@ width: 90%;
     width: fit-content;
     height: fit-content;
    display: flex;
+   align-self: center;
+   justify-self: center;
 
 }
 

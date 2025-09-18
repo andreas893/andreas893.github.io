@@ -71,7 +71,7 @@ const ProjectSlider = () => {
             <p>({String(project.id).padStart(2, "0")})</p>
             
             <div className="image-wrapper">
-                <img src={project.image[0]} alt={project.title} />
+                <img className="project-image" src={project.image[0]} alt={project.title} />
 
                 <div className="info-bar">
                     <p>{project.tools.join(", ")}</p>

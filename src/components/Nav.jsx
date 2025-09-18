@@ -1,8 +1,44 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
+import gsap from "gsap"
+import { SplitText } from "gsap/all"
+import { useGSAP } from "@gsap/react"
+
+gsap.registerPlugin(SplitText, useGSAP);
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
+
+    useGSAP(() => {
+    // Animate logo
+    gsap.from(".logo a", {
+      y: -100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "expo.out",
+    });
+
+    // Split nav links into characters
+    const navSplit = new SplitText(".nav-links a", { type: "lines" });
+
+    gsap.from(navSplit.lines, {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "expo.out",
+      stagger: 0.08,
+      delay: 0.8
+    });
+
+    // Animate right-side buttons (e.g. GET IN TOUCH)
+    gsap.from(".nav-btns", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      delay: 0.8,
+    });
+  }, []);
     
   return (
     <header>    
@@ -19,17 +55,17 @@ const Nav = () => {
                 <ul className="nav-links">
                     <li>
                         <NavLink to="/" end onClick={() => setIsOpen(false)}>
-                            HOME,
+                            HOME, 
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/om" onClick={() => setIsOpen(false)}>
-                            OM MIG,
+                            OM MIG, 
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/projekter " onClick={() => setIsOpen(false)}>
-                            PROJEKTER,
+                            PROJEKTER, 
                         </NavLink>
                     </li>
                     <li>
@@ -44,7 +80,10 @@ const Nav = () => {
            <div className="nav-btns">
                 <img className="nav-img" src="/music-icon.png" alt="music-icon" />
                 <a href="mailto:youremail@example.com" className="nav-btn">
-                    <div><p>GET IN TOUCH</p></div>
+                    <div className="text-anim">
+                        <p>GET IN TOUCH</p>
+                        <p>GET IN TOUCH</p>
+                    </div>
                     <span></span>
                 </a>
 

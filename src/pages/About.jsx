@@ -1,6 +1,7 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import "../about.css";
+import TextSlider from '../components/TextSlider';
 import { NavLink } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useState } from 'react';
@@ -30,7 +31,8 @@ const About = () => {
               <p className='a-text-2'>Jeg ser frontendduvikling som en mulighed for at skabe digitale oplevelser, hvor brugeroplevelse og design mødes i øjenhøjde med brugeren.</p>
 
               <NavLink to="/kontakt" className="nav-btn nav-btn-2">
-                <div><p>KONTAKT MIG</p></div>
+                <div className='text-anim' ><p>KONTAKT MIG</p>
+                <p>KONTAKT MIG</p></div>
                 <span></span>
               </NavLink>
           </div>
@@ -43,17 +45,7 @@ const About = () => {
 
 
       <div className="text-slider">
-         <div className="slider-track">
-            <span className="slider-item">FIGMA</span>
-            <span className="slider-item">REACT</span>
-            <span className="slider-item">CSS</span>
-            <span className="slider-item">HTML</span>
-            <span className="slider-item">GSAP</span>
-            <span className="slider-item">PHOTOSHOP</span>
-            <span className="slider-item">ILLUSTRATOR</span>
-            <span className="slider-item">JAVASCRIPT</span>
-      
-          </div>
+        <TextSlider />
       </div>
 
       <section className='about-galleri'>
@@ -66,6 +58,7 @@ const About = () => {
        
         <div className='about-img-container'>
             <motion.img
+                  className='img-4'
                   src="/about/about-4.png"
                   alt="about"
                   drag
@@ -78,6 +71,7 @@ const About = () => {
             />
             
             <motion.img
+                    className='img-3'
                     src="/about/about-3.png"
                     alt="about"
                     drag
@@ -90,6 +84,7 @@ const About = () => {
                     />
             
             <motion.img
+                className='img-2'
                 src="/about/about-2.png"
                 alt="about"
                 drag

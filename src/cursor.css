@@ -1,0 +1,38 @@
+:root {
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --primary-color: #FCFCFC;
+  --bg-color: #2E2E2E;
+  --secondary-color: #D8F999;
+  --tetriary-color: #111111;
+  --color-text:#E0E0E0;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 60px;
+  border-radius: 30px;
+  border: 3px solid var(--tetriary-color);
+  background: var(--secondary-color);
+  color: var(--tetriary-color);
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+  pointer-events: none; /* important: don’t block clicks */
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.25s ease-out;
+  z-index: 9999;
+}
+
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+

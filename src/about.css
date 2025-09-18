@@ -90,29 +90,6 @@ body h1{
 }
 
 
-/* slider css */
-.text-slider {
-    width: 100%;
-    height: 60px;
-    overflow: hidden;
-    background: white;
-    border-top: 2px solid #333;
-    border-bottom: 2px solid #333;
-}
-
-.slider-track {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    animation: scrollLeft 15s linear infinite;
-    white-space: nowrap;
-}
-
-@keyframes scrollLeft {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
 
 /* proces styling */
 .about-galleri{
@@ -123,6 +100,7 @@ body h1{
     border-radius: 20px;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    gap: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -150,7 +128,8 @@ body h1{
   grid-row: 1;
   position: relative;       /* let them overlap naturally */
   width: 100%;
-  height:100%;            /* enough space for dragging */
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,7 +146,8 @@ body h1{
   width: 60%;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-  width: 400px;   /* fixed width */
+  width: 100%;
+  max-width: 400px;   /* fixed width */
   height: 400px;  /* fixed height */
   object-fit: cover; /* crop instead of stretch */
   cursor: grab;
@@ -189,4 +169,163 @@ body h1{
   margin: 0 auto;
 }
 
+@media (max-width:767px){
+  .about-hero{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem 0 1rem;
+  }
 
+  .a-hero-grid{
+  display: flex;
+  flex-direction: column-reverse;
+  }
+
+  .ab-h1, .ab-h2{
+    font-size: 3rem;
+  }
+
+  .a-grid-item-2 img{
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .a-grid-item-2{
+    justify-content: center;
+    align-self: center;
+    width: 70%;
+  }
+
+  .a-text-1{
+    justify-self: center;
+  }
+  .a-text-2{
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+  }
+  .nav-btn-2{
+    margin: 0;
+    justify-self: center;
+  }
+
+  .ab-heading{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-galleri{
+   display: flex;
+   flex-direction: column-reverse;
+   justify-content: center;
+   align-items: center;
+   gap: 0;
+  }
+
+  .about-img-container{
+    position: static;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-img-container img{
+    position:static;
+    width: 100%;
+    height: auto;
+  }
+
+  .galleri-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .img-3, .img-4{
+    display: none;
+  }
+
+  .drag-text{
+    display: none;
+  }
+
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    .about-hero{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .a-hero-grid{
+  display: flex;
+  flex-direction: column-reverse;
+  }
+
+  .ab-h1, .ab-h2{
+    font-size: 3rem;
+  }
+
+  .a-grid-item-2 img{
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .a-grid-item-2{
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+  }
+
+
+  .nav-btn-2{
+    margin-left: 9rem;
+  }
+
+  .about-galleri{
+   display: flex;
+   flex-direction: column-reverse;
+   justify-content: center;
+   align-items: center;
+   gap: 0;
+  }
+
+  .about-img-container{
+    position: static;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-img-container img{
+    position:static;
+    width: 100%;
+    height: auto;
+  }
+
+  .galleri-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galleri-content h2{
+    align-self: flex-start;
+  }
+
+
+  .img-3, .img-4{
+    display: none;
+  }
+
+  .drag-text{
+    display: none;
+  }
+  
+}
