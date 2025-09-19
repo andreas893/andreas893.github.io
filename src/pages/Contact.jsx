@@ -36,7 +36,7 @@ const Contact = () => {
       <Nav />
       <section className='kontakt-heading'>
         <p className="ab-h1">SKAL VI SKABE</p>
-        <p className="ab-h2">NOGET SAMMEN</p>
+        <p className="ab-h2">NOGET SAMMEN?</p>
       </section>
       
       <section className='oplysninger'>

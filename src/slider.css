@@ -136,7 +136,7 @@ body h1{
 /* Info bar sits at bottom of image */
 .info-bar {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   left: 0;
   width: 100%;
   background: var(--tetriary-color);
@@ -192,6 +192,9 @@ body h1{
   font-weight: 500;
 }
 
+.info-bar{
+  display: none;
+}
 
 }
 
@@ -201,6 +204,9 @@ body h1{
   width: 290px;
 }
 
+.info-bar{
+  display: none;
+}
 
 .image-wrapper img{
   margin-bottom: 1rem;
@@ -221,7 +227,7 @@ body h1{
 
   .image-wrapper img{
   height: 400px;
-  width: 300px;
+  width: 360px;
 }
 
 .projekt-heading.after-heading{
