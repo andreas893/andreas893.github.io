@@ -3,11 +3,12 @@ import Footer from '../components/Footer'
 import "../about.css";
 import TextSlider from '../components/TextSlider';
 import { NavLink } from 'react-router-dom';
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { useState } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
+import { SplitText } from 'gsap/all';
 import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -138,7 +139,7 @@ const About = () => {
           </div>
        
         <div className='about-img-container'>
-            <motion.img
+            <Motion.img
                   className='img-4'
                   src="/about/about-4.png"
                   alt="about"
@@ -151,7 +152,7 @@ const About = () => {
                   onDragStart={() => setIsDropped1(false)}         // reset when picked up again
             />
             
-            <motion.img
+            <Motion.img
                     className='img-3'
                     src="/about/about-3.png"
                     alt="about"
@@ -164,7 +165,7 @@ const About = () => {
                     onDragStart={() => setIsDropped2(false)}         // reset when picked up again
                     />
             
-            <motion.img
+            <Motion.img
                 className='img-2'
                 src="/about/about-2.png"
                 alt="about"
