@@ -48,23 +48,27 @@ const ProjectSlider = () => {
     });
   }
 
-  // Animate cards on load (all screen sizes)
-  gsap.from(".project-card", {
-    opacity: 0,
-    y: 60,
-    scale: 0.95,
-    duration: 1,
-    ease: "power3.out",
-    stagger: 0.2,
-    delay: 0.3, // small delay to ensure DOM is ready
-  });
+  const tl = gsap.timeline();
+    tl.fromTo(
+      ".project-card",
+      { opacity: 0, y: 60, scale: 0.95 }, // start state
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+      }
+    );
 
-  return () => {
-    scrollTween?.scrollTrigger?.kill();
-    scrollTween?.kill();
-    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  };
-}, [projects]);
+    return () => {
+      scrollTween?.scrollTrigger?.kill();
+      scrollTween?.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      tl.kill();
+    };
+  }, [projects]);
     
     return (
     <div className="project-slider">

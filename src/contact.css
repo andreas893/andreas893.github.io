@@ -66,6 +66,28 @@ body h1{
     font-size: 3rem;
 }
 
+.k-grid-item-2 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;         /* just below text */
+  width: 100%;
+  height: 2px;
+  background: currentColor; /* same color as text */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.k-grid-item-2 a:hover {
+  color: #555; /* slightly darker/lighter on hover */
+}
+
+.k-grid-item-2 a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 @media (max-width:767px){
     .kontakt-heading p{
         font-size: 3rem;

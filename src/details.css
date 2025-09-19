@@ -76,6 +76,7 @@ body p{
     grid-template-columns: 0.5fr 1fr 1.2fr;
     align-items: flex-start;
     padding: 2rem;
+    gap: 1rem   ;
 }
 
 .year-content p{
@@ -149,6 +150,7 @@ body p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
+    gap: 1rem;
 }
 
 @media (max-width:767px){

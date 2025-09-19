@@ -1,8 +1,36 @@
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 import "../contact.css";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 const Contact = () => {
+   useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+
+    tl.fromTo(
+      ".kontakt-heading p",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, stagger: 0.2 }
+    )
+
+      // 2. Content
+      .fromTo(
+        ".k-grid-item-1",
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        "+=0.2" 
+      )
+
+      // 3. Links
+      .fromTo(
+        ".k-grid-item-2 a",
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.1 },
+        "+=0.2"
+      );
+  }, []);
   return (
     <main>
       <Nav />

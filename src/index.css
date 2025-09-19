@@ -732,7 +732,7 @@ figure .landing-vid{
 
     position: absolute;      /* take it out of document flow */
     top: 1rem;               /* adjust to match your navbar height */
-    right: 1rem;
+    right: 0.4rem;
     background: var(--tetriary-color);
     border-radius: 15px;
     padding: 1.5rem 2rem;
@@ -746,7 +746,7 @@ figure .landing-vid{
 
   .menu-dropdown.show {
   display: block;
-  height: 40vh;
+  height: 50vh;
   opacity: 1;
 }
 
@@ -1069,7 +1069,7 @@ width: 90%;
 
     position: absolute;      /* take it out of document flow */
     top: 1rem;               /* adjust to match your navbar height */
-    right: 1rem;
+    right: 0.4rem;
     background: var(--tetriary-color);
     border-radius: 15px;
     padding: 1.5rem 2rem;
@@ -1083,7 +1083,7 @@ width: 90%;
 
   .menu-dropdown.show {
   display: block;
-  height: 40vh;
+  height: 50vh;
   opacity: 1;
 }
 
