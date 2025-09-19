@@ -9,24 +9,18 @@ import "../slider.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-  useEffect(() => {
-    gsap.utils.toArray(".projekt-heading h1").forEach((heading) => {
-      gsap.fromTo(
-        heading,
-        { opacity: 0, y: 50 }, // start
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: heading,
-            start: "top 85%", // animate when THIS heading enters view
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
+   useEffect(() => {
+    // Animate only the first heading once on load
+    gsap.fromTo(
+      ".projekt-heading:first-of-type h1",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+      }
+    );
   }, []);
 
 
@@ -42,7 +36,7 @@ const Projects = () => {
         <ProjectSlider />
       </section>
 
-       <section className='projekt-heading after-heading'>
+       <section className='projekt-heading'>
         <h1>PROJEKTER</h1>
         <h1>(04)</h1>
       </section>
