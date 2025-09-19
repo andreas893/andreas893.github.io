@@ -51,7 +51,7 @@ const Contact = () => {
         
         <div className="k-grid-item-2">
           <a target='_blank' href="https://www.linkedin.com/in/andreas-hansen-baab87372/">LinkedIn</a>
-          <a  href="mailto:youremail@example.com">Andreashansen@gmail.com</a>
+          <a  href="mailto:youremail@example.com">andreashansen893@gmail.com</a>
         </div>
 
       </section>
