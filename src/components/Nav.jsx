@@ -3,12 +3,14 @@ import { useState,useEffect } from "react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"
 import { useGSAP } from "@gsap/react"
+import { useRef } from "react"
 
 gsap.registerPlugin(SplitText, useGSAP);
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
-
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRef = useRef(null);
     useGSAP(() => {
 
     gsap.from(".logo a", {
@@ -67,7 +69,19 @@ const Nav = () => {
       });
     }
   }, [isOpen]);
-    
+
+   const toggleMusic = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch((err) => {
+        console.log("Autoplay blocked:", err);
+      });
+    }
+    setIsPlaying(!isPlaying);
+  };
   return (
     <header>    
         <nav className='navbar'>
@@ -106,7 +120,8 @@ const Nav = () => {
             
 
            <div className="nav-btns">
-                <img className="nav-img" src="/music-icon.png" alt="music-icon" />
+                <img className="nav-img" src="/music-icon.png" alt="music-icon" onClick={toggleMusic} style={{cursor:"pointer"}} />
+                 <audio ref={audioRef} src="/song.mp3" loop />
                 <a href="mailto:youremail@example.com" className="nav-btn">
                     <div className="text-anim">
                         <p>GET IN TOUCH</p>
