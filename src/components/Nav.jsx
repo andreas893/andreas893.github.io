@@ -122,7 +122,7 @@ const Nav = () => {
            <div className="nav-btns">
                 <img className="nav-img" src="/music-icon.png" alt="music-icon" onClick={toggleMusic} style={{cursor:"pointer"}} />
                  <audio ref={audioRef} src="/song.mp3" loop />
-                <a href="mailto:youremail@example.com" className="nav-btn">
+                <a href="mailto:andreashansen893@gmail.com" className="nav-btn">
                     <div className="text-anim">
                         <p>GET IN TOUCH</p>
                         <p>GET IN TOUCH</p>
